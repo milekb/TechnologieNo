@@ -1,0 +1,81 @@
+[{
+"type": "Standalone", "writeConcern": "{w:1;j:true}", "real": 12.897, "user": 33.490, "sys": 1.648},
+{
+"type": "Standalone", "writeConcern": "{w:1;j:true}", "real": 12.624, "user": 34.397, "sys": 1.931},
+{
+"type": "Standalone", "writeConcern": "{w:1;j:true}", "real": 11.730, "user": 34.173, "sys": 1.949},
+{
+"type": "Standalone", "writeConcern": "{w:1;j:true}", "real": 13.556, "user": 34.140, "sys": 1.704},
+{
+"type": "Standalone", "writeConcern": "{w:1;j:true}", "real": 12.668, "user": 34.177, "sys": 2.022},
+{
+"type": "Standalone", "writeConcern": "{w:1;j:false}", "real": 11.502, "user": 33.794, "sys": 1.872},
+{
+"type": "Standalone", "writeConcern": "{w:1;j:false}", "real": 11.613, "user": 33.806, "sys": 1.903},
+{
+"type": "Standalone", "writeConcern": "{w:1;j:false}", "real": 11.562, "user": 33.920, "sys": 1.799},
+{
+"type": "Standalone", "writeConcern": "{w:1;j:false}", "real": 11.552, "user": 33.916, "sys": 1.882},
+{
+"type": "Standalone", "writeConcern": "{w:1;j:false}", "real": 11.628, "user": 33.880, "sys": 1.751},
+{
+"type": "Standalone", "writeConcern": "{w:2;j:true}", "real": 12.285, "user": 33.986, "sys": 1.811},
+{
+"type": "Standalone", "writeConcern": "{w:2;j:true}", "real": 12.347, "user": 33.863, "sys": 1.872},
+{
+"type": "Standalone", "writeConcern": "{w:2;j:true}", "real": 12.358, "user": 34.245, "sys": 1.683},
+{
+"type": "Standalone", "writeConcern": "{w:2;j:true}", "real": 12.429, "user": 34.009, "sys": 1.799},
+{
+"type": "Standalone", "writeConcern": "{w:2;j:true}", "real": 12.797, "user": 34.747, "sys": 1.954},
+{
+"type": "Standalone", "writeConcern": "{w:2;j:false}", "real": 14.156, "user": 38.409, "sys": 2.436},
+{
+"type": "Standalone", "writeConcern": "{w:2;j:false}", "real": 15.436, "user": 42.123, "sys": 2.056},
+{
+"type": "Standalone", "writeConcern": "{w:2;j:false}", "real": 15.377, "user": 44.328, "sys": 2.201},
+{
+"type": "Standalone", "writeConcern": "{w:2;j:false}", "real": 12.770, "user": 37.562, "sys": 2.087},
+{
+"type": "Standalone", "writeConcern": "{w:2;j:false}", "real": 13.782, "user": 39.161, "sys": 1.993},
+{
+"type": "replicaSet", "writeConcern": "{w:1;j:true}", "real": 28.753, "user": 40.995, "sys": 1.980},
+{
+"type": "replicaSet", "writeConcern": "{w:1;j:true}", "real": 29.298, "user": 42.431, "sys": 2.117},
+{
+"type": "replicaSet", "writeConcern": "{w:1;j:true}", "real": 25.771, "user": 35.051, "sys": 1.758},
+{
+"type": "replicaSet", "writeConcern": "{w:1;j:true}", "real": 27.121, "user": 41.362, "sys": 2.031},
+{
+"type": "replicaSet", "writeConcern": "{w:1;j:true}", "real": 22.234, "user": 37.408, "sys": 1.986},
+{
+"type": "replicaSet", "writeConcern": "{w:1;j:false}", "real": 17.693, "user": 33.706, "sys": 1.806},
+{
+"type": "replicaSet", "writeConcern": "{w:1;j:false}", "real": 18.631, "user": 34.977, "sys": 1.935},
+{
+"type": "replicaSet", "writeConcern": "{w:1;j:false}", "real": 23.011, "user": 39.147, "sys": 2.410},
+{
+"type": "replicaSet", "writeConcern": "{w:1;j:false}", "real": 20.441, "user": 38.517, "sys": 2.266},
+{
+"type": "replicaSet", "writeConcern": "{w:1;j:false}", "real": 20.181, "user": 38.146, "sys": 2.262},
+{
+"type": "replicaSet", "writeConcern": "{w:2;j:true}", "real": 27.869, "user": 34.303, "sys": 2.002},
+{
+"type": "replicaSet", "writeConcern": "{w:2;j:true}", "real": 29.577, "user": 34.691, "sys": 1.880},
+{
+"type": "replicaSet", "writeConcern": "{w:2;j:true}", "real": 27.731, "user": 34.067, "sys": 2.136},
+{
+"type": "replicaSet", "writeConcern": "{w:2;j:true}", "real": 31.417, "user": 39.460, "sys": 2.561},
+{
+"type": "replicaSet", "writeConcern": "{w:2;j:true}", "real": 37.142, "user": 45.737, "sys": 2.605},
+{
+"type": "replicaSet", "writeConcern": "{w:2;j:false}", "real": 31.727, "user": 43.304, "sys": 2.473},
+{
+"type": "replicaSet", "writeConcern": "{w:2;j:false}", "real": 29.652, "user": 42.748, "sys": 2.513},
+{
+"type": "replicaSet", "writeConcern": "{w:2;j:false}", "real": 26.080, "user": 36.565, "sys": 2.232},
+{
+"type": "replicaSet", "writeConcern": "{w:2;j:false}", "real": 24.296, "user": 33.197, "sys": 1.944},
+{
+"type": "replicaSet", "writeConcern": "{w:2;j:false}", "real": 22.545, "user": 32.783, "sys": 2.116}
+]

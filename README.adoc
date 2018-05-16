@@ -1,0 +1,73 @@
+# Projekt na zaliczenie - Miłosz Bieńkowski
+
+## Projekt Moje Dane
+
+W projekcie wykorzystałem dane ze strony:
+
+Link do bazy (https://www.kaggle.com/selfishgene/historical-hourly-weather-data).
+
+Zbiór danych zawiera ~ 5 lat danych o wysokiej rozdzielczości czasowej (pomiarach godzinowych) o różnych atrybutach pogody, takich jak temperatura, wilgotność, ciśnienie powietrza itp.
+Dane te są dostępne dla 30 miast amerykańskich i kanadyjskich, a także 6 miast izraelskich.
+Zorganizowałem dane według wspólnej osi czasu, aby ułatwić ich używanie.
+Każdy atrybut ma swój własny plik i jest zorganizowany w taki sposób, że wiersze są osią czasu (jest to ta sama oś czasowa dla wszystkich plików), a kolumny są różnymi miastami (to samo zamawianie w mieście dla wszystkich plików).
+Dodatkowo dla każdego miasta mamy również informacje o kraju, szerokości i długości geograficznej w osobnym pliku.
+
+.Przykładowy JSON z bazy
+```bash
+{
+    "_id" : ObjectId("5ae09a2d512d4a27f16930c9"),
+    "City" : "Phoenix",
+    "  Country" : "  United States",
+    "  Latitude" : 33.44838,
+    "  Longitude" : -112.074043
+}
+```
+
+### 1. Jak uruchomić?
+
+Aby uruchomić całą procedurę importowania oraz tworzenia czasów wystarczy wpisać będąc w folderze projektu komendę bash'a:
+
+```bash
+./calyProces.sh
+```
+
+### 2. Opis skryptów.
+
+W pierwszej kolejności dataset zbudowany z 7 plików formatu _.csv_ został przekonwertowany do formatu _.json_, tak aby mógł zostać zaimportowany komendą _mongoimport_. Do tych celów został stworzony skrypt _przygotowanieDanych.sh_, który
+przeszukuje odpowiedni folder w poszukiwaniu plików _.csv_, a następnie uruchamia program _CSVtoJSON.java_ konwertujący do formatu _.json_. Następnie uruchamiany jest skrypt importTimes.sh, który tworzy bazę danych (plik CreateDatabase.java oraz CreateDatabaseRPLocal.java) i importuje dane do utworzonych baz danych
+wykorzystując polecenie _mongoimport_, automatycznie wyliczając czasy każdego z importów np.
+```bash
+./src/importTimes.sh importMongoStandalone.sh replicaSet "{w:1,j:true}"
+```
+**Uwaga:** Po każdym takim poleceniu baza zostaje usunięta, a czasy zapisane do pliku formatu  _.json_.
+
+.Przykładowy wynik importTimes.sh
+
+```bash
+{
+    "_id" : ObjectId("5ae0a921c11712258d344b94"),
+    "type" : "replicaSet",
+    "writeConcern" : "{w:1;j:true}",
+    "real" : 22.234,
+    "user" : 37.408,
+    "sys" : 1.986
+}
+```
+
+### 3. Opis sytemu.
+
+Wszystkie obliczenia oraz skrypty zostały wykonane na komputerze mobilnym z procesorem Intel i7-2630QM, kartą graficzną NVIDIA Geforce GT 540m oraz dyskiem twardym Intel SSD 6 series, 8GB RAM'u na systemie operacyjnym Ubuntu 16.04 LTS.
+
+### 4. Wyniki dla mojej bazy danych.
+
+.Średnie czasy importu bazy do MongoDB
+[width="50%",cols=">1,1,2,2",frame="topbot",options="header"]
+|==========================
+|Parametry    |User  |Real |System
+|Standalone   |12,695|34,075|1,859
+|ReplicaSet Default |32,227|37,541|2,010
+|ReplicaSet w: 1, j: true |26,635|39,449|1,974
+|ReplicaSet w: 1, j: false |19,991|36,898|2,1358
+|ReplicaSet w: 2, j: true |31,177|37,651|2,236
+|ReplicaSet w: 2, j: false |26,860|37,719|2,225
+|==========================
